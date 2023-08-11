@@ -37,10 +37,12 @@ function passwordParameters(){
       }
       loop2 = false;
     }else{
-      alert('Please enter either "Y" or "N" to indicate your choice.')
+      alert('Please enter either "Y" or "N" to indicate your choice.');
     }
   }
   while(loop2 == true);
+  // console.log(password);
+  return password;
 }
 
 // Get references to the #generate element
@@ -49,6 +51,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = passwordParameters();
+  // console.log(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
